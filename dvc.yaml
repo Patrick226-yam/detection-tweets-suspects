@@ -1,0 +1,29 @@
+stages:
+  preprocess:
+    cmd: python scripts/preprocess.py
+    deps:
+      - data/tweets_suspect.csv
+      - scripts/preprocess.py
+    outs:
+      - data/tweets_preprocessed.csv
+
+  train:
+    cmd: python scripts/train.py
+    deps:
+      - data/tweets_preprocessed.csv
+      - scripts/train.py
+    outs:
+      - models/model.pkl
+    metrics:
+      - metrics.json:
+          cache: false
+
+  evaluate:
+    cmd: python scripts/evaluate.py
+    deps:
+      - models/model.pkl
+      - data/tweets_preprocessed.csv
+      - scripts/evaluate.py
+    metrics:
+      - metrics.json:
+          cache: false

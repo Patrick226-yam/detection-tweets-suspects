@@ -1,0 +1,5 @@
+outs:
+- md5: 0db32fcca9062033472db56b048e4c7a
+  size: 7491847
+  hash: md5
+  path: tweets_preprocessed.csv

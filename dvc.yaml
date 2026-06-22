@@ -14,9 +14,6 @@ stages:
       - scripts/train.py
     outs:
       - models/model.pkl
-    metrics:
-      - metrics.json:
-          cache: false
 
   evaluate:
     cmd: python scripts/evaluate.py

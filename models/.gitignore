@@ -2,3 +2,7 @@
 /tfidf_vectorizer.pkl
 /X_test.npy
 /y_test.npy
+X_tfidf.npy
+X_w2v.npy
+model_rf.pkl
+word2vec.model

@@ -14,13 +14,18 @@ stages:
       - scripts/train.py
     outs:
       - models/model.pkl
+      - models/tfidf_vectorizer.pkl
 
   evaluate:
     cmd: python scripts/evaluate.py
     deps:
       - models/model.pkl
+      - models/tfidf_vectorizer.pkl
       - data/tweets_preprocessed.csv
       - scripts/evaluate.py
+    outs:
+      - confusion_matrix.png
+      - courbe_roc.png
     metrics:
       - metrics.json:
           cache: false

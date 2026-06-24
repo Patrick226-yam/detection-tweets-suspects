@@ -1,0 +1,4 @@
+/model.pkl
+/tfidf_vectorizer.pkl
+/X_test.npy
+/y_test.npy

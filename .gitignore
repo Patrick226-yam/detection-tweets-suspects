@@ -1,3 +1,5 @@
 .ipynb_checkpoints/ 
 tweets_suspect.csv 
 tweets_preprocessed.csv 
+/confusion_matrix.png
+/courbe_roc.png

@@ -25,13 +25,17 @@ stages:
       size: 7295729
     - path: scripts/train.py
       hash: md5
-      md5: 6b4541dc30c97ef5ab40352b254094da
-      size: 246
+      md5: 755027c7aaa21c7f71089c76e6efa3cb
+      size: 2074
     outs:
     - path: models/model.pkl
       hash: md5
-      md5: f396893cb5717d3e9715cb7f2e895014
-      size: 38
+      md5: a8e0412137600922d805ff73646af993
+      size: 315232
+    - path: models/tfidf_vectorizer.pkl
+      hash: md5
+      md5: a270e2cc47929b8d62a842f2a8275221
+      size: 179224
   evaluate:
     cmd: python scripts/evaluate.py
     deps:
@@ -41,14 +45,26 @@ stages:
       size: 7295729
     - path: models/model.pkl
       hash: md5
-      md5: f396893cb5717d3e9715cb7f2e895014
-      size: 38
+      md5: a8e0412137600922d805ff73646af993
+      size: 315232
+    - path: models/tfidf_vectorizer.pkl
+      hash: md5
+      md5: a270e2cc47929b8d62a842f2a8275221
+      size: 179224
     - path: scripts/evaluate.py
       hash: md5
-      md5: 2d6b990592aff4709ba7c113a4623850
-      size: 262
+      md5: 44e3740dcba3ebd4c6f81928f0d71cf6
+      size: 2781
     outs:
+    - path: confusion_matrix.png
+      hash: md5
+      md5: 3145742bc37ad0e7e4b409a8a6639f25
+      size: 22616
+    - path: courbe_roc.png
+      hash: md5
+      md5: 63c5623cdecad9d9055685d486c220a8
+      size: 35328
     - path: metrics.json
       hash: md5
-      md5: 63165a033cee9e2a98aaa104bfb4fd44
-      size: 67
+      md5: 241ad100301e449eaa1d902238131d09
+      size: 94

@@ -1,8 +1,8 @@
 # Détection de Tweets Suspects
 
-> Projet d'examen final — Master FIDA, Semestre 3  
+> Projet d'examen final Master FIDA, Semestre 3  
 > Construction de Modèles et leur Déploiement  
-> Enseignant : Dr. Abdoul Kader KABORE
+> Enseignant : **Dr. Abdoul Kader KABORE**
 
 ---
 
@@ -19,7 +19,7 @@ Ce projet développe une solution complète de **classification automatique de t
 
 ---
 
-## 📁 Structure du projet
+## Structure du projet
 
 ```
 CODE/
@@ -49,8 +49,8 @@ CODE/
 - **Source** : Dérivé du corpus Sentiment140 (tweets en anglais)
 - **Taille** : 60 000 tweets
 - **Classes** :
-  - `0` : Non-suspect (tweets normaux) : 53 855 exemples (89,8%)
-  - `1` : Suspect (tweets négatifs/offensants) : 6 145 exemples (10,2%)
+  - `0` : Non-suspect (tweets positifs) : 53 855 exemples (89,8%)
+  - `1` : Suspect (tweets négatifs) : 6 145 exemples (10,2%)
 
 > **NB** : Les labels du dataset original étaient inversés (0 = négatif, 1 = positif). Une correction a été appliquée dans les scripts (`label = 1 - label`).
 

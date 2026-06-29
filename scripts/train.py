@@ -14,9 +14,9 @@ os.makedirs('models', exist_ok=True)
 df = pd.read_csv('data/tweets_preprocessed.csv')
 df['text_clean'] = df['text_clean'].fillna('')
 
-# ✅ Correction des labels inversés : 0=suspect, 1=normal → on inverse
+# Correction des labels inversés : 0=suspect, 1=normal 
 df['label'] = 1 - df['label']
-# Maintenant : 1 = Suspect (6145), 0 = Non-suspect (53855)
+# 1 = Suspect (6145), 0 = Non-suspect (53855)
 
 X_raw = df['text_clean'].values
 y = df['label'].values

@@ -21,7 +21,6 @@ with open('models/tfidf_vectorizer.pkl', 'rb') as f:
 df = pd.read_csv('data/tweets_preprocessed.csv')
 df['text_clean'] = df['text_clean'].fillna('')
 
-# ✅ Même correction que train.py
 df['label'] = 1 - df['label']
 
 X_raw = df['text_clean'].values

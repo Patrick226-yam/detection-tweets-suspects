@@ -49,7 +49,7 @@ if st.button("Analyser"):
         vect = tfidf.transform([processed])
         probability = model.predict_proba(vect)[0]
 
-        # ✅ Labels corrigés : 1 = Suspect, 0 = Non-suspect
+        # Labels corrigés : 1 = Suspect, 0 = Non-suspect
         # Seuil ajusté à 0.3 car la classe suspecte est minoritaire (10%)
         proba_suspect = probability[1]
         prediction = 1 if proba_suspect >= 0.3 else 0
